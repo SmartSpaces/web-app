@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+
+    <title>SmartSpaces - Co-Working Intelegence</title>
+
+    
+    <!-- for minified GSS file use: gss.min.js -->
+    <script src="https://s3-us-west-2.amazonaws.com/cdn.thegrid.io/gss/v2.0.0/v2.0.0/gss.min.js"></script>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+
+
+    <!--[if lte IE 8]>
+      
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+      
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+      
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+      
+    <!--<![endif]-->
+
+
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/stylesheets/font-awesome.css">
+
+
+
+  
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="stylesheets/layouts/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+       <link rel="stylesheet" href="marketing.css">
+    <!--<![endif]-->
+
+
+    <style type="text/gss">
+        /* GSS needs the dimension of the image to calculate its position. */
+        #cassowaryImg[height] == 250;
+        /* The width == the height multiply by the width/height ratio */
+        #cassowaryImg[width] == #cassowaryImg[height] * 409/450;
+        /* This will position the image to be in the center of the window! That's easy! */
+        #cassowaryImg[center] == ::window[center];
+
+        /* Get the size of the h1 and p tags using their intrinsic size */
+        h1[size] == h1[intrinsic-size];
+        p[size] == p[intrinsic-size];
+
+        /* VFL to vertically align the elements */
+        @v (h1)-30-(#cassowaryImg)-20-(p);
+
+        /* Horizontally align the h1 and p with the image */
+        h1[center-x] == p[center-x] == #cassowaryImg[center-x];
+        
+       
+        h1.splash-head[center] == ::window[center];
+        
+		/* Get the size of the h1 and p tags using their intrinsic size */
+        h1.splash-head[size] == h1.splash-head[intrinsic-size];
+        .splash-subhead[size] == .splash-subhead[intrinsic-size];
+        
+        /* VFL to vertically align the elements */
+        @v ( h1.splash-head[)-30-(#splash-btn)-20-(.splash-subhead);
+        
+        h1.splash-head[center=x] == #splash-btn[center-x] == .splash-subhead[center=x];
+        
+        
+    </style>
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+  /* you can see what is going on in the engine with console.log(window.engine) */
+  window.engine = new GSS(document);
+</script>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">SmartSpaces</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="http://smartspaces.mybluemix.net/" class="pure-menu-link">Example</a></li>
+            <li class="pure-menu-item"><a href="/map-5-o.html" class="pure-menu-link">Map</a></li>
+            <li class="pure-menu-item"><a href="/form.html" class="pure-menu-link">Tour</a></li>
+            <li class="pure-menu-item"><a href="/login.html" class="pure-menu-link">Login</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">Co-Working intelligence</h1>
+        <p class="splash-subhead">
+            Optimizing Startup Ecosystems via insights into co-working inhabitants.
+        </p>
+        <p>
+            <a href="/map-5-o.html" id="splash-btn" class="pure-button pure-button-primary">Get Started</a>
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="content">
+        <h2 class="content-head is-center">How it Works</h2>
+
+        <div class="pure-g is-center">
+            <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
+
+                <h3 class="content-subhead">
+                    <i class="fa fa-rocket"></i>
+                    1. Personality Insights
+                </h3>
+                <p>
+                    Everyone at the co-working space takes the test and an anonymous result emerges per company. 
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-mobile"></i>
+                    2. Optimize Co-Working
+                </h3>
+                <p>
+                	Empowered with the data, co-working spaces can then optimize their offices based on SmartSpace Insights.     
+				</p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-th-large"></i>
+                    3. Goes both ways
+                </h3>
+                <p>
+                    Co-Working Space Managers are empowered but startups are too. They can see everyone's score and choose the best space for them.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ribbon l-box-lrg pure-g">
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+            <img class="pure-img-responsive" alt="File Icons" width="300" src="">
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+
+            <h2 class="content-head content-head-ribbon">No two spaces the same.</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor.
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+
+                        <label for="name">Your Name</label>
+                        <input id="name" type="text" placeholder="Your Name">
+
+
+                        <label for="email">Your Email</label>
+                        <input id="email" type="email" placeholder="Your Email">
+
+                        <label for="password">Your Password</label>
+                        <input id="password" type="password" placeholder="Your Password">
+
+                        <button type="submit" class="pure-button">Sign Up</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                <h4>Contact Us</h4>
+                <p>
+                    Get in touch with us. Let's talk about how we can help you find the perfect co-working space
+                    or if your a co-working manager, we'll help you find the optimal startups to include in your space. 
+                </p>
+
+                <h4>More Information</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer l-box is-center">
+        &copy;2015 SmartSpaces NYC
+    </div>
+
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
